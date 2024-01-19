@@ -1,6 +1,6 @@
- **# Deploying FastAPI with Nginx, Uvicorn, Gunicorn, and PM2 on Ubuntu**
+# Deploying FastAPI with Nginx, Uvicorn, Gunicorn, and PM2 on Ubuntu
 
-**## Table of Contents**
+## Table of Contents
 
 - Prerequisites: #prerequisites
 - Installation: #installation
@@ -11,13 +11,13 @@
 - Testing the Deployment: #testing-the-deployment
 - Additional Notes: #additional-notes
 
-**## Prerequisites**
+## Prerequisites
 
 - An Ubuntu server with SSH access
 - Python 3.6 or newer installed
 - A non-root user with sudo privileges
 
-**## Installation**
+## **Installation**
 
 1. **Update Package Lists:**
 
@@ -50,7 +50,7 @@
    sudo npm install -g pm2
    ```
 
-**## Setting Up FastAPI Application**
+## **Setting Up FastAPI Application**
 
 1. **Create a Project Directory:**
 
@@ -71,7 +71,7 @@
        return {"message": "Hello World!"}
    ```
 
-**## Running FastAPI with Gunicorn**
+## **Running FastAPI with Gunicorn**
 
 1. **Start the Application:**
 
@@ -79,7 +79,7 @@
    gunicorn -w 4 -k uvicorn.workers.UvicornWorker main:app
    ```
 
-**## Managing with PM2**
+## **Managing with PM2**
 
 1. **Start with PM2:**
 
@@ -93,7 +93,7 @@
    - Stop a process: `pm2 stop my_fastapi_app`
    - Restart a process: `pm2 restart my_fastapi_app`
 
-**## Configuring Nginx as a Reverse Proxy**
+## **Configuring Nginx as a Reverse Proxy**
 
 1. **Create Nginx Configuration File:**
 
@@ -137,7 +137,7 @@
    sudo service nginx restart
    ```
 
-**## Testing the Deployment**
+## **Testing the Deployment**
 
 1. Access your server's IP address or domain name in a web browser. You should see the "Hello World!" message from your FastAPI app.
 
